@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
+import WorldwideContainer from './containers/WorldwideContainer';
+import temp from './components/worldwideData/temp';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <div className="routingContainer">
+          <nav className="NavLink ">
+          <ul className="header width">
+            <li><NavLink to={'/coronavirus-tracker'} className="nav-link"> Worldwide </NavLink></li>
+            <li><NavLink to={'/a'} className="nav-link">Coming soon</NavLink></li>
+          </ul>
+          </nav>
+         <Switch>
+         <Route path = "/" exact component = {WorldwideContainer}/>
+          <Route path = "/coronavirus-tracker" component = {WorldwideContainer}/>
+          <Route path = "/a" component = {temp}/>
+         </Switch>
+      </div>
+    </Router>
   );
 }
 
