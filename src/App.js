@@ -11,13 +11,13 @@ function App() {
         <div className="routingContainer">
           <nav className="NavLink ">
           <ul className="header width">
-            <li><NavLink exact to={'/'} className="nav-link"> Worldwide </NavLink></li>
+            <li><NavLink to={'/covid19-tracker'} className="nav-link"> Worldwide </NavLink></li>
             <li><NavLink to={'/a'} className="nav-link">Coming soon</NavLink></li>
           </ul>
           </nav>
          <Switch>
          <Route path = "/" exact component = {WorldwideContainer}/>
-          <Route path = "/coronavirus-tracker" component = {WorldwideContainer}/>
+          <Route path = "/covid19-tracker" component = {WorldwideContainer}/>
           <Route path = "/a" component = {temp}/>
          </Switch>
       </div>
