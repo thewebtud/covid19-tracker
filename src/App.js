@@ -11,7 +11,7 @@ function App() {
         <div className="routingContainer">
           <nav className="NavLink ">
           <ul className="header width">
-            <li><NavLink to={'/coronavirus-tracker'} className="nav-link"> Worldwide </NavLink></li>
+            <li><NavLink exact to={'/'} className="nav-link"> Worldwide </NavLink></li>
             <li><NavLink to={'/a'} className="nav-link">Coming soon</NavLink></li>
           </ul>
           </nav>
