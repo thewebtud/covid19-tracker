@@ -9,7 +9,7 @@ export class temp extends React.Component {
        
         return (
            <div>
-              <h1>Superman at work....</h1>
+              <h1>Superman at work...</h1>
            </div>
         );
     }
