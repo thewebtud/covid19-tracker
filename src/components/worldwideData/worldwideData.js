@@ -16,7 +16,6 @@ export class Worldwide extends React.Component {
     componentWillMount() {
         axios.get('https://covid19.mathdro.id/api')
         .then(response => {
-            console.log(response.data);
             this.setState({confirmed: response.data.confirmed.value});
             this.setState({recovery: response.data.recovered.value});
             this.setState({death: response.data.deaths.value});

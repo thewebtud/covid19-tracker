@@ -8,35 +8,45 @@ export class countrySearch extends React.Component {
         this.state = {
             confirmed: 0,
             recovery: 0,
-            death: 0
+            death: 0,
+            countries: [],
+            selectedCountry: 'India'
         };
     }
 
     componentWillMount() {
-        // axios.get('https://covid19.mathdro.id/api')
-        // .then(response => {
-        //     console.log(response.data);
-        //     this.setState({confirmed: response.data.confirmed.value});
-        //     this.setState({recovery: response.data.recovered.value});
-        //     this.setState({death: response.data.deaths.value});
-        // })
+        axios.get('https://covid19.mathdro.id/api/countries')
+        .then(response => {
+            this.setState({countries: response.data.countries});
+        });
+
+        axios.get('https://covid19.mathdro.id/api/countries/'+this.state.selectedCountry)
+        .then(response => {
+            this.setState({confirmed: response.data.confirmed.value});
+            this.setState({recovery: response.data.recovered.value});
+            this.setState({death: response.data.deaths.value});
+        });
+
+    }
+
+    handleCountryChange () {
+        console.log("INSIDE FUNCTION");
     }
 
     render() {
-       
         return (
            <div>
                <div className="country_search_container">
                    <div>
                    <p className = "worldwide_para">Search for Country: </p> <br/>
                    </div>
-                   <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Country
+                   <div class="dropdown" onChange={this.handleCountryChange}>
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{this.state.selectedCountry}
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href="#">HTML</a></li>
-                        <li><a href="#">CSS</a></li>
-                        <li><a href="#">JavaScript</a></li>
+                        {this.state.countries.map((country, index) => {
+                            return <li key={country.iso2}><a key={country.iso2}>{country.name}</a></li>
+                        })}
                     </ul>
                     </div>
                 </div>

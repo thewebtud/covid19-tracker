@@ -25,6 +25,21 @@
     .death .category_label {
       color: red !important;
     }
+
+    .dropdown {
+        margin-left: 5%;
+    }
+    
+    .dropdown-menu {
+        max-height: 250px;
+        overflow: scroll;background-color: black;
+        background-color: rgb(33, 43, 54);
+        color: beige;
+    }
+
+    .dropdown-menu li a:hover {
+        background-color: burlywood;
+    }
   
   @media only screen and (min-width: 767px){
     .worldwide_info_container > div {
