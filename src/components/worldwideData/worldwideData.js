@@ -48,6 +48,8 @@ export class Worldwide extends React.Component {
                        <a className="category_value">{this.state.death}</a>
                     </div>
                </div>
+               <br/>    
+               <p className="recovery_percentage_para">Recovery Percentage: {((this.state.recovery / this.state.confirmed) * 100).toPrecision(2)}% </p>
                <br/> <br/> <br/>
            </div>
         );

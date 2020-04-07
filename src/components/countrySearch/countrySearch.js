@@ -10,7 +10,8 @@ export class countrySearch extends React.Component {
             recovery: 0,
             death: 0,
             countries: [],
-            selectedCountry: 'India'
+            selectedCountry: 'India',
+            recoveryPerentage: 0
         };
     }
 
@@ -19,19 +20,28 @@ export class countrySearch extends React.Component {
         .then(response => {
             this.setState({countries: response.data.countries});
         });
+        this.populateDataForSpecificCountry(this.state.selectedCountry);
+    }
 
-        axios.get('https://covid19.mathdro.id/api/countries/'+this.state.selectedCountry)
+    componentWillUpdate() {
+
+    }
+
+    populateDataForSpecificCountry(selectedCountry) {
+        this.setState({selectedCountry: selectedCountry});
+        axios.get('https://covid19.mathdro.id/api/countries/'+selectedCountry)
         .then(response => {
             this.setState({confirmed: response.data.confirmed.value});
             this.setState({recovery: response.data.recovered.value});
             this.setState({death: response.data.deaths.value});
         });
-
     }
 
-    handleCountryChange () {
-        console.log("INSIDE FUNCTION");
-    }
+    // handleCountryChange (countryName) {
+    //     console.log(countryName);
+    //     this.setState({selectedCountry : countryName});
+    //     this.populateDataForSpecificCountry();
+    // }
 
     render() {
         return (
@@ -40,12 +50,12 @@ export class countrySearch extends React.Component {
                    <div>
                    <p className = "worldwide_para">Search for Country: </p> <br/>
                    </div>
-                   <div class="dropdown" onChange={this.handleCountryChange}>
+                   <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{this.state.selectedCountry}
                     </button>
                     <ul class="dropdown-menu">
                         {this.state.countries.map((country, index) => {
-                            return <li key={country.iso2}><a key={country.iso2}>{country.name}</a></li>
+                            return <li key={country.iso2} onClick={this.populateDataForSpecificCountry.bind(this, country.name)}><a key={country.iso2}>{country.name}</a></li>
                         })}
                     </ul>
                     </div>
@@ -66,6 +76,9 @@ export class countrySearch extends React.Component {
                        <a className="category_value">{this.state.death}</a>
                     </div>
                </div>
+               <br/>    
+               <p className="recovery_percentage_para">Recovery Percentage: {((this.state.recovery / this.state.confirmed) * 100).toPrecision(2)}% </p>
+               <br/> <br/> <br/>
            </div>
         );
     }

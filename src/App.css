@@ -36,8 +36,10 @@ ul.header li {
 }
 
 ul.header {
-  background-image:linear-gradient(160deg,#00ffff , #0099ff, #00ffff , #006699, #006699,  #0099ff);
+  /* background-image:linear-gradient(160deg,#00ffff , #0099ff, #00ffff , #006699, #006699,  #0099ff);  */
+  background-image:linear-gradient(160deg,#124e58 , #8fafbd, #1f3d3d , #637e8a, #55788a,  #4f93c0); 
   /*width: 1365px;*/
+  /* background-color: rgb(255, 255, 255); */
 }
 
 .width{
@@ -45,7 +47,10 @@ ul.header {
 }
 
 .active {
-  background-color: whitesmoke;
+  /* background-color: rgb(95, 135, 145); */
+  background-image:linear-gradient(160deg,#124e58 , #8fafbd, #1f3d3d , #637e8a, #55788a,  #4f93c0);
+  border: 0.5px solid white;
+  border-radius: 5px;
 }
 
 
