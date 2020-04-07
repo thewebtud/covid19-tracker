@@ -23,6 +23,7 @@ function App() {
           <Route path = "/india-statewise" component = {IndianStateWise}/>
           <Route path = "/coming-soon" component = {temp}/>
          </Switch>
+         <hr/>
       </div>
     </Router>
   );
