@@ -84,8 +84,8 @@ ul.header {
   }
 }
 
-@media only screen and (max-width: 767px){
+/* @media only screen and (max-width: 767px){
   body {
     width: fit-content !important;
   }
-}
+} */
