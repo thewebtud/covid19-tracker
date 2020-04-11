@@ -2,6 +2,9 @@ import React from "react";
 import CoronaMaskLogo from '../../img/coronalogo.svg';
 import axios from 'axios';
 import './worldwideData.css';
+import Confirmed from '../../img/done.svg';
+import Recovered from '../../img/recovered.svg';
+import Death from '../../img/death.svg';
 
 export class Worldwide extends React.Component {
     constructor(props) {
@@ -15,43 +18,66 @@ export class Worldwide extends React.Component {
 
     componentWillMount() {
         axios.get('https://covid19.mathdro.id/api')
-        .then(response => {
-            this.setState({confirmed: response.data.confirmed.value});
-            this.setState({recovery: response.data.recovered.value});
-            this.setState({death: response.data.deaths.value});
-        })
+            .then(response => {
+                this.setState({ confirmed: response.data.confirmed.value });
+                this.setState({ recovery: response.data.recovered.value });
+                this.setState({ death: response.data.deaths.value });
+            })
     }
 
     render() {
-       
+
         return (
-           <div>
-               <div className = "worldwide_top_logo_container">
-                   <img src = {CoronaMaskLogo} className="rotate" alt = "Go Corona.. Corona Go" />
-               </div>
-               <div>
-                   <p className = "worldwide_para">Data from whole world: </p>
-               </div>
-                   
-                   <br/><br/>
-               <div class="worldwide_info_container">
-                   <div className="confirmed">
-                       <a className="category_label">Confirmed</a> <br/> <br/>
-                       <a className="category_value">{this.state.confirmed}</a>
-                   </div>
-                   <div className="recovered">
-                       <a className="category_label">Recovered</a> <br/> <br/>
-                       <a className="category_value">{this.state.recovery}</a>
-                    </div>  
-                   <div className="death">
-                       <a className="category_label">Deaths</a> <br/> <br/>
-                       <a className="category_value">{this.state.death}</a>
+            <div>
+                <div className="worldwide_top_logo_container">
+                    <img src={CoronaMaskLogo} className="rotate" alt="Go Corona.. Corona Go" />
+                </div>
+                <div>
+                    <p className="worldwide_para">Global Data </p>
+                </div>
+
+                <br /><br />
+                <div class="worldwide_info_container">
+                    <div className="confirmed">
+                        <div>
+                            <a className="category_label">Confirmed</a> <br /> <br />
+                        </div>
+                        <div>
+                            <img src={Confirmed} className="rotate" alt="Confirmed cases" />
+                        </div>
+                        <div>
+                            <a className="category_value">{this.state.confirmed}</a>
+                        </div>
                     </div>
-               </div>
-               <br/>    
-               <p className="recovery_percentage_para">Recovery Percentage: {((this.state.recovery / this.state.confirmed) * 100).toPrecision(2)}% </p>
-               <br/> <br/> <br/>
-           </div>
+                    <div className="recovered">
+
+                        <div>
+                            <a className="category_label">Recovered</a> <br /> <br />
+                        </div>
+                        <div>
+                            <img src={Recovered} className="rotate" alt="Total recovery" />
+                        </div>
+                        <div>
+                            <a className="category_value">{this.state.recovery}</a>
+                        </div>
+                    </div>
+                    <div className="death">
+
+                        <div>
+                            <a className="category_label">Deaths</a> <br /> <br />
+                        </div>
+                        <div>
+                            <img src={Death} className="rotate" alt="Total deaths" />
+                        </div>
+                        <div>
+                            <a className="category_value">{this.state.death}</a>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <p className="recovery_percentage_para">Recovery Percentage: {((this.state.recovery / this.state.confirmed) * 100).toPrecision(2)}% </p>
+                <br /> <br /> <br />
+            </div>
         );
     }
 }
