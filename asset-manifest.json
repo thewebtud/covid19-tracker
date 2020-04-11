@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/covid19-tracker/static/css/main.1e328d48.chunk.css",
-    "main.js": "/covid19-tracker/static/js/main.5e93b880.chunk.js",
-    "main.js.map": "/covid19-tracker/static/js/main.5e93b880.chunk.js.map",
+    "main.css": "/covid19-tracker/static/css/main.fb882266.chunk.css",
+    "main.js": "/covid19-tracker/static/js/main.e2a359a2.chunk.js",
+    "main.js.map": "/covid19-tracker/static/js/main.e2a359a2.chunk.js.map",
     "runtime-main.js": "/covid19-tracker/static/js/runtime-main.56e53f11.js",
     "runtime-main.js.map": "/covid19-tracker/static/js/runtime-main.56e53f11.js.map",
     "static/js/2.1ebd9a0f.chunk.js": "/covid19-tracker/static/js/2.1ebd9a0f.chunk.js",
     "static/js/2.1ebd9a0f.chunk.js.map": "/covid19-tracker/static/js/2.1ebd9a0f.chunk.js.map",
     "index.html": "/covid19-tracker/index.html",
-    "precache-manifest.81cd832a26c2bdbbe268d6ea0e1d67db.js": "/covid19-tracker/precache-manifest.81cd832a26c2bdbbe268d6ea0e1d67db.js",
+    "precache-manifest.17a9f6c5fe23ae4d4dee4776d7eed88b.js": "/covid19-tracker/precache-manifest.17a9f6c5fe23ae4d4dee4776d7eed88b.js",
     "service-worker.js": "/covid19-tracker/service-worker.js",
-    "static/css/main.1e328d48.chunk.css.map": "/covid19-tracker/static/css/main.1e328d48.chunk.css.map",
+    "static/css/main.fb882266.chunk.css.map": "/covid19-tracker/static/css/main.fb882266.chunk.css.map",
     "static/js/2.1ebd9a0f.chunk.js.LICENSE.txt": "/covid19-tracker/static/js/2.1ebd9a0f.chunk.js.LICENSE.txt",
     "static/media/coronalogo.svg": "/covid19-tracker/static/media/coronalogo.4f6ef320.svg",
     "static/media/death.svg": "/covid19-tracker/static/media/death.c242f9e7.svg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.56e53f11.js",
     "static/js/2.1ebd9a0f.chunk.js",
-    "static/css/main.1e328d48.chunk.css",
-    "static/js/main.5e93b880.chunk.js"
+    "static/css/main.fb882266.chunk.css",
+    "static/js/main.e2a359a2.chunk.js"
   ]
 }
