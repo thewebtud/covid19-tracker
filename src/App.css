@@ -83,3 +83,9 @@ ul.header {
     transform: rotate(360deg);
   }
 }
+
+@media only screen and (max-width: 767px){
+  body {
+    width: fit-content !important;
+  }
+}
