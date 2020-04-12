@@ -37,7 +37,7 @@ function App() {
             </ul>
           </nav> */}
           <Switch>
-            <Route path="/" exact component={WorldwideContainer} />
+            {/* <Route path="/" exact component={WorldwideContainer} /> */}
             <Route path="/covid19-tracker" component={WorldwideContainer} />
             <Route path="/india-statewise" component={IndianStateWise} />
             <Route path="/coming-soon" component={temp} />
