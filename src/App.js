@@ -10,23 +10,37 @@ import {
   NavLink,
   HashRouter
 } from "react-router-dom";
+import { Button } from 'react-bootstrap';
 
-function App() {
+export class App extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+          isChecked: false
+      };
+  }
+
+  handleCheckboxClick () {
+    this.setState({isChecked : !this.state.isChecked});
+  }
+
+  render() {
+
   return (
     <div className="app_container">
       <HashRouter>
 
-      <nav role="navigation" id="nav_bar_hamburger">
+      <nav role="navigation" id="nav_bar_hamburger" >
           <div id="menuToggle">
-            <input type="checkbox" />
+            <input type="checkbox" checked={this.state.isChecked} onClick={this.handleCheckboxClick.bind(this)}/>
             <span></span>
             <span></span>
             <span></span>
 
             <ul id="menu">
-              <li><NavLink exact to="/">Worldwide</NavLink></li>
-            <li><NavLink to="/indiastatewise">IndianStateWise</NavLink></li>
-            <li><NavLink to="/comingsoon">ComingSoon</NavLink></li>
+              <li onClick={this.handleCheckboxClick.bind(this)}><NavLink exact to="/">Worldwide</NavLink></li>
+            <li onClick={this.handleCheckboxClick.bind(this)}><NavLink to="/indiastatewise">IndianStateWise</NavLink></li>
+            <li onClick={this.handleCheckboxClick.bind(this)}><NavLink to="/comingsoon">ComingSoon</NavLink></li>
             </ul>
           </div>
         </nav>
@@ -40,6 +54,7 @@ function App() {
       </HashRouter>
     </div>
   );
+}
 }
 
 export default App;
