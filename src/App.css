@@ -12,14 +12,14 @@ body {
   height: 40vmin;
   pointer-events: none;
 }
-
+/* 
 .NavLink {
-  /* position: -webkit-sticky;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 99; */
+  z-index: 99;
   display: none;
-}
+} */
 
 ul.header li a {
   color: black;
@@ -49,9 +49,9 @@ ul.header {
 
 .active {
   /* background-color: rgb(95, 135, 145); */
-  background-image:linear-gradient(160deg,#124e58 , #8fafbd, #1f3d3d , #637e8a, #55788a,  #4f93c0);
-  border: 0.5px solid white;
-  border-radius: 5px;
+  /* background-image:linear-gradient(160deg,#124e58 , #8fafbd, #1f3d3d , #637e8a, #55788a,  #4f93c0); */
+  /* border: 0.5px solid white; */
+  /* border-radius: 5px; */
 }
 
 
@@ -125,8 +125,6 @@ body
 #menuToggle a
 {
   text-decoration: none;
-  color: #232323;
-  
   transition: color 0.3s ease;
 }
 
@@ -167,10 +165,6 @@ body
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 #menuToggle input:checked ~ span
 {
   opacity: 1;
@@ -266,4 +260,3 @@ body
 
 
 }
-
