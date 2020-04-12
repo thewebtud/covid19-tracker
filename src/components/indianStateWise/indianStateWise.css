@@ -3,7 +3,7 @@
 }
 
 .statewise_outer_div {
-    margin: 0 10% 0 10%;
+    margin: 0 20% 0 20%;
 }
 
 tbody>tr>:nth-child(5){ 
@@ -22,6 +22,11 @@ tbody>tr>:nth-child(5){
     color: red;
 }
 
+td, th {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+    font-size: 15px;
+}
 
 @media only screen and (max-width: 767px){
     .statewise_outer_div {

@@ -32,7 +32,7 @@ export class indianStateWise extends React.Component {
                         <thead>
                             <tr>
                             <th>#</th>
-                            <th>State</th>
+                            <th>State </th>
                             <th>Confirmed</th>
                             <th>Recovered</th>
                             <th>Deaths</th>

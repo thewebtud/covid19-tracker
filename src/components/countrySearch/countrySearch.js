@@ -56,6 +56,7 @@ export class countrySearch extends React.Component {
                     <div class="dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" id="country_dropdown_button" data-toggle="dropdown">
                             <img src={`https://www.countryflags.io/${this.state.selectedCountryISO}/shiny/24.png`} />
+                            &nbsp;
                             {this.state.selectedCountry}
                         </button>
                         <ul class="dropdown-menu">
@@ -63,6 +64,7 @@ export class countrySearch extends React.Component {
                                 return <li key={country.iso2} onClick={this.populateDataForSpecificCountry.bind(this, country.name, country.iso2)}>
                                     <a key={country.iso2}>
                                         <img src={`https://www.countryflags.io/${country.iso2}/shiny/24.png`} />
+                                        &nbsp;
                                         {country.name}
                                     </a> </li>
                             })}

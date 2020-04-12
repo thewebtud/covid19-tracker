@@ -20,6 +20,7 @@
 .worldwide_para{
     float: left;
     margin: 0;
+    font-size: 20px;
 }
 
 .worldwide_info_container {
@@ -44,7 +45,7 @@
   }
 
   .death .category_label {
-    color: red !important;
+    color: rgb(236, 49, 75) !important;
   }
 
   .recovery_percentage_para{
