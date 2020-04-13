@@ -33,7 +33,7 @@
     margin: 0 2% 0 2%;  
     background-color: rgb(33, 43, 54);
     text-align: center;
-    padding: 2% 0 2% 0;
+    padding: 3% 0 3% 0;
   }
 
   .confirmed .category_label {
@@ -74,5 +74,9 @@
 @media only screen and (max-width: 767px){
 .rotate {
   width: 15%;
+}
+
+#rotating_three_logo {
+  margin-top: -20px;
 }
 }

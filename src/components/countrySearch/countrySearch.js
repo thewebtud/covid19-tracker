@@ -79,7 +79,7 @@ export class countrySearch extends React.Component {
                             <a className="category_label">Confirmed</a> <br /> <br />
                         </div>
                         <div>
-                            <img src={Confirmed} className="rotate" alt="Confirmed cases" />
+                            <img src={Confirmed} className="rotate" id="rotating_three_logo" alt="Confirmed cases" />
                         </div>
                         <div>
                             <a className="category_value">{this.state.confirmed}</a>
@@ -91,7 +91,7 @@ export class countrySearch extends React.Component {
                             <a className="category_label">Recovered</a> <br /> <br />
                         </div>
                         <div>
-                            <img src={Recovered} className="rotate" alt="Total recovery" />
+                            <img src={Recovered} className="rotate" id="rotating_three_logo" alt="Total recovery" />
                         </div>
                         <div>
                             <a className="category_value">{this.state.recovery}</a>
@@ -103,7 +103,7 @@ export class countrySearch extends React.Component {
                             <a className="category_label">Deaths</a> <br /> <br />
                         </div>
                         <div>
-                            <img src={Death} className="rotate" alt="Total deaths" />
+                            <img src={Death} className="rotate" id="rotating_three_logo" alt="Total deaths" />
                         </div>
                         <div>
                             <a className="category_value">{this.state.death}</a>
