@@ -1,16 +1,14 @@
 import React from 'react';
 import './App.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
 import WorldwideContainer from './containers/WorldwideContainer';
-import temp from './components/worldwideData/temp';
+import WhatsTrendingtrending from './components/WhatsTrending/corouselComponent';
 import IndianStateWise from './components/indianStateWise/indianStateWise';
+import temp from './components/temp/temp'
 import {
   Route,
   NavLink,
   HashRouter
 } from "react-router-dom";
-import { Button } from 'react-bootstrap';
 
 export class App extends React.Component {
   constructor(props) {
@@ -40,6 +38,7 @@ export class App extends React.Component {
             <ul id="menu">
               <li onClick={this.handleCheckboxClick.bind(this)}><NavLink exact to="/">Worldwide</NavLink></li>
             <li onClick={this.handleCheckboxClick.bind(this)}><NavLink to="/indiastatewise">IndianStateWise</NavLink></li>
+            <li onClick={this.handleCheckboxClick.bind(this)}><NavLink to="/trending">What's Trending</NavLink></li>
             <li onClick={this.handleCheckboxClick.bind(this)}><NavLink to="/comingsoon">ComingSoon</NavLink></li>
             </ul>
           </div>
@@ -49,6 +48,7 @@ export class App extends React.Component {
             <Route exact path="/" component={WorldwideContainer} />
             <Route exact path="/covid19-tracker" component={WorldwideContainer} />
             <Route path="/indiastatewise" component={IndianStateWise} />
+            <Route path="/trending" component={WhatsTrendingtrending} />
             <Route path="/comingsoon" component={temp} />
           </div>
       </HashRouter>

@@ -1,0 +1,38 @@
+.carousel_outer_div {
+    display: flex;
+    padding-top: 10%;
+}
+
+#myCarousel, #myCarousel2 {
+    width: 18%;
+    border: 10px solid white;
+}
+
+#myCarousel {
+    margin-right: 10%;
+    margin-left: 20%;
+}
+
+#myCarousel2 {
+    margin-left: 10%;
+}
+
+
+@media only screen and (max-width: 767px){
+    #myCarousel, #myCarousel2, #myCarousel3 {
+        width: 45%;
+        border: 2px solid white;
+        
+        
+    }
+
+    #myCarousel{
+        margin-right: 0;
+        margin-left: 3%;
+    }
+
+    #myCarousel2{
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+  }

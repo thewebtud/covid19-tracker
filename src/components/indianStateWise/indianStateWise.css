@@ -32,4 +32,8 @@ td, th {
     .statewise_outer_div {
         margin: 0;
     }
+
+td, th {
+    font-size: 10px;
+}
 }
